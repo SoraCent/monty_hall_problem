@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<title>Monty Hall Problem</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img alt="Logo" src="favicon.ico" />
+      </nav>
+    </header>
+    <div class="main_content">
+      <h1>Monty Hall Problem</h1>
+      <p class="game_moderator" id="game_moderator">Wähle eine Tür</p>
+      <div class="all_doors">
+        <div id="door1" onclick="Wahl_Eins()">
+          <img id="door1_img" alt="Door 1" src="resourcen/door1.png" />
+        </div>
+        <div id="door2" onclick="Wahl_Zwei()">
+          <img id="door2_img" alt="Door 2" src="resourcen/door2.png" />
+        </div>
+        <div id="door3" onclick="Wahl_Drei()">
+          <img id="door3_img" alt="Door 3" src="resourcen/door3.png" />
+        </div>
+      </div>
+      <button onclick="Neuer_Versuch()" id="new_game_button">Neuer Versuch?</button>
+    </div>
+    <div class="settings">
+      <h2 id="settings_title">Settings</h2>
+      <div class="settings_language">
+        <span>
+          <span id="settings_language_title">Language: </span>
+          <select id="settings_language_select" onchange="ChangeLang(this)">
+            <option value="English">English</option>
+            <option value="German">German</option>
+          </select>
+        </span>
+      </div>
+    </div>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
