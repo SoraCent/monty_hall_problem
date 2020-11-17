@@ -82,10 +82,8 @@ function moderator() {
         my_door = my_door - 1;
         while (true) {
             moderator_choose = Math.floor(Math.random() * 3);
-            console.log(preis_liste[moderator_choose]);
             if (preis_liste[moderator_choose] != "auto" && moderator_choose != my_door) {
                 moderator_span.text(lang.game_moderator_second);
-                console.log(preis_liste);
 
                 door1.attr("onclick", "Zweite_Wahl_Eins()");
                 door2.attr("onclick", "Zweite_Wahl_Zwei()");
@@ -123,10 +121,6 @@ function Letzte_Runde() {
     if (preis_liste[second_choose] == "auto") {
         moderator_span.text(lang.game_moderator_won);
         tada_sound.play();
-        console.log(second_choose);
-        console.log(moderator_choose);
-        console.log(zahlen_liste[second_choose]);
-        console.log(zahlen_liste[moderator_choose]);
         if(second_choose != moderator_choose && zahlen_liste[second_choose] != "1" && zahlen_liste[moderator_choose] != "1") {
           door1.attr("onclick", "Neuer_Versuch()");
           door1_img.attr("src", "resourcen/goat.jpg");
