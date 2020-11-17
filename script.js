@@ -120,6 +120,12 @@ function moderator() {
 function Letzte_Runde() {
     if (preis_liste[second_choose] == "auto") {
         moderator_span.text(lang.game_moderator_won);
+        if (!tada_sound.paused || !fail_sound.paused) {
+            tada_sound.pause();
+            tada_sound.currentTime = 0;
+            fail_sound.pause();
+            fail_sound.currentTime = 0;
+        }
         tada_sound.play();
         if(second_choose != moderator_choose && zahlen_liste[second_choose] != "1" && zahlen_liste[moderator_choose] != "1") {
           door1.attr("onclick", "Neuer_Versuch()");
@@ -150,6 +156,12 @@ function Letzte_Runde() {
     }
     else if (preis_liste[second_choose] == "ziege") {
         moderator_span.text(lang.game_moderator_fail);
+        if (!tada_sound.paused || !fail_sound.paused) {
+            tada_sound.pause();
+            tada_sound.currentTime = 0;
+            fail_sound.pause();
+            fail_sound.currentTime = 0;
+        }
         fail_sound.play();
         if(second_choose != moderator_choose && preis_liste[second_choose] != "auto" && zahlen_liste[second_choose] != "1" && zahlen_liste[moderator_choose] != "1") {
           door1.attr("onclick", "Neuer_Versuch()");
