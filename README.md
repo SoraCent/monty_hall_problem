@@ -12,4 +12,4 @@ My version of the Monty Hall Problem in HTML, CSS and JS
 + Statistics
 
 ## Demo
-[My Demo](https://soracent.de/projects/webprojects/monty_hall_problem/)
+[My Demo](https://projekte.soracent.de/webprojekte/monty_hall_problem/)
